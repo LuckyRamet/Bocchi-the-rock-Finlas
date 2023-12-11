@@ -1,0 +1,53 @@
+body{
+  color: white;
+  display: grid;
+  place-content: center;
+  min-height: 80vh;
+  font-family: 'Roboto', sans-serif;
+}
+.cards{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+.card{
+  border-radius: 2rem;
+  min-width: 15rem;
+  min-height: 15rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+.name{
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 800;
+  top: 5rem;
+  line-height: 0.8;
+  transition: all 0.25s ease-in-out;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.25s ease-in-out;
+}
+.main{
+  position: absolute;
+  z-index: 999;
+  transform: translateX(2rem);
+  transition: all 0.25s ease-in-out;
+}
+.card:hover > .bg{
+  transform: scaleY(0);
+}
+.card:hover > .main{
+  transform: translateX(10rem);
+}
+.card:hover{
+  min-width: 20rem;
+}
+.card:hover > .name{
+  font-size: 4.2rem;
+}
